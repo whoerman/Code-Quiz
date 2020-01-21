@@ -1,17 +1,26 @@
-let dataA = {
-    questionX : "What is my new grandaughter's name?",
-    answerA : "Sally",
-    answerB : "Jill",
-    answerC : "Clara",
-    answerD : "Maeve",
-    correctAnswer: "C",
-}
+let dataA = [
+    "What is my new grandaughter's name?",
+    "Sally",
+    "Jill",
+    "Clara",
+    "Maeve",
+    "Clara"
+]
 
-let dataB = {
-    questionX : "What is my first grandaughter's name?",
-    answerA : "Sally",
-    answerB : "Jill",
-    answerC : "Clara",
-    answerD : "Maeve",
-    correctAnswer: "D",
-}
+let dataB = [
+    "What is my first grandaughter's name?",
+    "Sally",
+    "Jill",
+    "Clara",
+    "Maeve",
+    "Maeve"
+]
+
+let dataC = [
+    "What is my name?",
+    "Sally",
+    "Walter",
+    "Clara",
+    "Maeve",
+    "Walter"
+]
