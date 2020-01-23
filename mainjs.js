@@ -10,7 +10,7 @@ loadQuestion();
 //putting the new question on the page and loading data for answers
 function loadQuestion() {
     x = x + 1;
-    $("#question").empty().text((x + 1) + ": " + dataArray[x][0]);
+    $("#question").empty().text((x) + ": " + dataArray[x][0]);
     $("#optionA").empty().text("A. " + dataArray[x][1]);
     $("#optionB").empty().text("B. " + dataArray[x][2]);
     $("#optionC").empty().text("C. " + dataArray[x][3]);
@@ -19,21 +19,21 @@ function loadQuestion() {
 
 //listen for clicking
 $(document).ready(function () {
-    $("#optionA").click(function () {
+    $("#optionA").on("click", function () {
         if (dataArray[x][1] === dataArray[x][5]) {
             URCorrect();
             return;
         };
         URWrong();
     });
-    $("#optionB").click(function () {
+    $("#optionB").on("click", function () {
         if (dataArray[x][2] === dataArray[x][5]) {
             URCorrect();
             return;
         };
         URWrong();
     });
-    $("#optionC").click(function () {
+    $("#optionC").on("click", function () {
 
         if (dataArray[x][3] === dataArray[x][5]) {
             URCorrect();
@@ -41,7 +41,7 @@ $(document).ready(function () {
         };
         URWrong();
     });
-    $("#optionD").click(function () {
+    $("#optionD").on("click", function () {
 
         if (dataArray[x][4] === dataArray[x][5]) {
             URCorrect();
