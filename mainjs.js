@@ -4,6 +4,7 @@ let wrongA = 0;
 let rightA = 0;
 totalAnswers = 0;
 let timeLeft = 90;
+let pageArray = localStorage.getItem("storedArray");
 
 //start coundown timer
 countdownID = setInterval(function() {
@@ -152,3 +153,11 @@ function endGame() {
     console.log("game Over");
     alert("game over");
 };
+
+
+function resultArray() {
+    
+}
+
+
+

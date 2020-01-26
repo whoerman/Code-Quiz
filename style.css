@@ -7,8 +7,17 @@ body {
     flex: content;
 }
 
+.backfill {
+    background-color: #ffffff;
 
 p {
+    background-color: #ffffff;
+    font-size: 1.5rem;
+}
+
+
+form {
+    background-color: #ffffff;
     font-size: 1.5rem;
 }
 
