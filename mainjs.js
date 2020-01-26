@@ -6,6 +6,7 @@ totalAnswers = 0;
 let timeLeft = 90;
 let pageArray = localStorage.getItem("storedArray");
 let timerStarted = false;
+let finalScore = 0;
 
 //start coundown timer
 function startTimer() {
@@ -56,7 +57,7 @@ function loadQuestion() {
 
 //If the question is answered correctly
 function URCorrect() {
-    $congratsText.text("Correct! 2 second bonus!");
+    $congratsText.text("Correct! 2 second bonus!").css("background-color", "#99cc90");
     rightA = rightA + 1;
     timeLeft = timeLeft +2;
     checkStatus();
@@ -65,7 +66,7 @@ function URCorrect() {
 
 //if the question is answered incorretly
 function URWrong() {
-    $congratsText.text("Wrong! 5 second penalty!");
+    $congratsText.text("Wrong! 5 second penalty!").css("background-color", "#ff726f");
     wrongA = wrongA + 1;
     timeLeft = timeLeft-5;
     $wrongbtnText.empty().text(wrongA);
@@ -85,11 +86,6 @@ function checkStatus() {
     endGame();
 };
 
-//end Game process
-function endGame() {
-    console.log("game Over");
-    alert("game over");
-};
 
 //listen for clicking
 $(document).ready(function () {
@@ -135,6 +131,21 @@ $(document).ready(function () {
         };
         URWrong();
     });
+
+    $(".inputScore").on("click", function () {
+        playerName = $("#inputName").val();
+        resultArray();
+    });
+
+    $(".gotoResult").on("click", function () {
+        playerName = $("#inputName").val();
+        resultArray();
+    });
+
+    $(".gotoResult").on("click", function () {
+        playerName = $("#inputName").val();
+        resultArray();
+    });
 });
 
 //check the status of the game after an answer
@@ -150,18 +161,24 @@ function checkStatus() {
 
 //end Game process
 function endGame() {
+    clearInterval();
     clearInterval(timeLeft);
+    scoreCorrect = rightA * 5;
+    finalScore = timeLeft + scoreCorrect;
+    console.log(finalScore);
     $countdownTimer.empty().text("Game Over!");
     console.log("game Over");
-    alert("game over");
-    window.open("./results.html");
-    
+    $questionText.empty().text("Your knowledge of Javascript is amazing! Or maybe not... Input your score to see where you rank.");
+    $optionAText.empty().html('<form> <div class="form-group row m-2 text-center"> <label for="inputPassword" class="col-sm-2 col-form-label">Your Name:</label>        <div class="col-sm-8"> <input type="text" class="form-control" id="inputName"> </div></div></form>');
+    $optionBText.empty().html('<button type="button" class="btn btn-primary btn-lg inputScore">Click here to Input your score</button>');
+    $optionCText.empty().text('<button type="button" class="btn btn-primary btn-lg clearScore">Click here to clear the high Scores!</button>');
+    $optionDText.empty().html('<a class="btn btn-lg btn-success text-center gotoResult" href="./results.html" role="button">Click Here!</a>');
+    $congratsText.empty();
 };
 
 
 function resultArray() {
-    
-}
-
-
-
+    console.log("Results");
+    console.log(playerName);
+    console.log(finalScore);
+};
