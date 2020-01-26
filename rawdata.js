@@ -3,26 +3,8 @@
 
 
 
-11.  ______ tag is an extension to HTML that can enclose any number of JavaScript statements.",
-A.  <SCRIPT>",
-B.   <BODY>",
-C.  <HEAD>",
-D.  <TITLE>",
- Ans: A",
 
-12.  How does JavaScript store dates in a date object?
-A.  The number of milliseconds since January 1st, 1970
-B.   The number of days since January 1st, 1900
-C.  The number of seconds since Netscape's public stock offering.
-D.  None of the above
- Ans: A
 
-13.  Which of the following attribute can hold the JavaScript version?
-A.  LANGUAGE
-B.   SCRIPT
-C.  VERSION
-D.  None of the above
- Ans: A
 
 14.  What is the correct JavaScript syntax to write "Hello World"?
 A.  System.out.println("Hello World")
