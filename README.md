@@ -1,6 +1,14 @@
 # Code-Quiz
 A timed Quiz on coding
 
+Skills demonstrated:
+written with extnesive jQuery
+DOM manipulation
+DOM targeting and click inputs
+dynamic css formatting
+dynamic timer with changing parameters
+scoring dynamically as well
+
 Assignment:
 User Story
 AS A coding bootcamp student
