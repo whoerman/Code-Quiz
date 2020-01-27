@@ -4,9 +4,9 @@ let wrongA = 0;
 let rightA = 0;
 totalAnswers = 0;
 let timeLeft = 90;
-let pageArray = localStorage.getItem("storedArray");
 let timerStarted = false;
 let finalScore = 0;
+
 
 //start coundown timer
 function startTimer() {
@@ -88,10 +88,10 @@ function endGame() {
     scoreCorrect = rightA * 5;
     finalScore = timeLeft + scoreCorrect;
     $countdownTimer.empty().text("Game Over!");
-    $questionText.empty().html('<form> <div class="form-group row m-2 text-center"> <label for="inputName" class="col-sm-2 col-form-label">Your Name:</label><div class="col-sm-8"> <input type="text" class="form-control" id="inputName"> </div></div></form>');
-    $optionAText.empty()
+    $questionText.empty();
+    $optionAText.empty().text("Your final score was " + JSON.stringify(finalScore));
     $optionBText.empty().text("Your knowledge of Javascript is amazing! Or maybe not... Input your score to see where you rank.");
-    $optionCText.empty();
+    $optionCText.empty().html('"Your Name:" + <input class="form-control" type="text" placeholder="Default input">');
     $optionDText.empty();
     $congratsText.empty().css("background-color", "#ffffff");
     $congratsText.empty().html('<button type="button" class="btn btn-warning btn-lg" id="clearScore">Clear the high Scores!</button><button type="button" class="btn btn-primary btn-lg" id = "inputScore">Input your score!</button><a class="btn btn-lg btn-success text-center gotoResult" href="./index.html" role="button">Play Again!</a>');
